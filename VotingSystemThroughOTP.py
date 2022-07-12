@@ -60,4 +60,4 @@ if now >= 9 and now <= 18: # if user votes from 9am to 6pm
             s.sendmail('&&&&&&&&&&&', email, message)
             print("Mail Sent Sucessfully")
 else: # if voting time is over
-    print("The Voting time is over Please cast your vote tommorow")
+    print("The Voting time is over Please cast your vote tomorrow")
