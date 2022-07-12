@@ -8,8 +8,8 @@ list = ["Manish", "Mukesh", "Amit", "Suresh"] # persons standing for voting
 print("You need to verify OTP to vote")
 now = datetime.datetime.now().time().hour # taking hours hand to vote from 9am to 6pm
 if now >= 9 and now <= 18: # if user votes from 9am to 6pm
-    user = input("Enter Your Name >>: ")  # Enter name
-    email = input("Enter Your Email >>: ") # Enter email to verify and vote
+    user = input("Enter Your Name : ")  # Enter name
+    email = input("Enter Your Email : ") # Enter email to verify and vote
     otp = "" # Declaring empty string to store otp
     for i in range(6): # for loop for creating a 6 digit otp 
         otp += str(r.randint(1, 9)) # pushing randing number 1 to 9 in string otp
@@ -39,7 +39,7 @@ if now >= 9 and now <= 18: # if user votes from 9am to 6pm
             print("OTP Verified")
             break
     if count == 0:
-        print("You have entered wrong OTP 3 times now you may try to vote tommorow")
+        print("You have entered wrong OTP 3 times now you may try to vote tomorrow")
     elif count == 1:
         i = 1
         for cnadidate in list: # printing name of contesting persons iterating through loop
@@ -51,7 +51,7 @@ if now >= 9 and now <= 18: # if user votes from 9am to 6pm
         print(f"Casted by : {user}\nCasted to : {list[CastedVote-1]}")
         ifyes = input("You want to have Your vote detais through mail (Enter Yes/No) : ")
         ifyes = ifyes.upper() # updating if yes to upper case
-        print("Thanks For You Valuable Vote")
+        print("Thanks For Casting Your Valuable Vote")
         if ifyes == "YES": # if user desiers to get vote details through mail
             text = (
                 f"Vote Details : \nCasted by : {user}\nCasted to : {list[CastedVote-1]}")
